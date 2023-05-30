@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Assignment01.FontRegular">
+        <item name="android:fontFamily">@font/sans_regular</item>
+    </style>
+
+    <style name="Assignment01.FontMedium">
+        <item name="android:fontFamily">@font/sans_medium</item>
+    </style>
+
+    <style name="Assignment01.FontBold">
+        <item name="android:fontFamily">@font/sans_bold</item>
+    </style>
+</resources>

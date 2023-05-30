@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        style="@style/Assignment01.Title1"
+        android:id="@+id/tvNoRecord"
+        android:layout_marginStart="@dimen/d_16"
+        android:layout_marginEnd="@dimen/d_16"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/d_100"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="@dimen/d_150"
+        app:layout_constraintStart_toStartOf="@+id/tvNoRecord"
+        app:layout_constraintEnd_toEndOf="@+id/tvNoRecord"
+        android:layout_marginTop="@dimen/d_10"
+        android:id="@+id/btnRetry"
+        style="@style/Assignment01.RetryButton"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoRecord"
+        android:layout_height="@dimen/d_45"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
