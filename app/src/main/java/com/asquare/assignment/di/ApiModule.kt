@@ -7,9 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -26,7 +24,7 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun provideConnectionTimeout() = 60L
+    fun provideConnectionTimeout() = 1L
 
     @Provides
     @Singleton
@@ -34,10 +32,10 @@ class ApiModule {
 
     @Singleton
     @Provides
-    fun provideOkHttpClient() = OkHttpClient().newBuilder()
-    .connectTimeout(1, TimeUnit.MINUTES)
-    .writeTimeout(2, TimeUnit.MINUTES)
-    .readTimeout(1, TimeUnit.MINUTES)
+    fun provideOkHttpClient(connectionTimeOut:Long) = OkHttpClient().newBuilder()
+        .connectTimeout(connectionTimeOut, TimeUnit.MINUTES)
+        .writeTimeout(connectionTimeOut, TimeUnit.MINUTES)
+        .readTimeout(connectionTimeOut, TimeUnit.MINUTES)
         .build()
 
 
